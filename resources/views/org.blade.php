@@ -8,32 +8,17 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: cory-sfg
+ * User: cory
  * Date: 3/1/2019
  * Time: 11:30 AM
  */
-$mid = 0;
-include("init.inc.php");
-?>
+include("init.inc.php"); ?>
 <br><br><br><br>
 <div class="container">
     <table class="table">
         <tbody>
-       <?php
-        foreach ($data as $datas){
-            echo '<tr>';
-        foreach($datas as $dat) {
-    echo "<td>", $dat,  '</td>';
-}
-        $datasLink = $datas[4];
-
-         echo  "<td><form method='get' action= '/emp/'$_SERVER[PHP_SELF]>
-                   <input hidden type='text' name='managerId' value='$datas[4]'>
-                    <input type='submit' value='See org-chart'>
-                </form></td>";
-
-      echo '</tr>';
-        }?>
+       <?php include("inc/chart.inc.php");
+           cvsMain($data); ?>
         </tbody>
     </table>
     <br><br><br><br>
@@ -41,10 +26,16 @@ include("init.inc.php");
 <hr>
 
 <div class="row justify-content-center align-items-center">
-<form method="get" action="<?php echo $_SERVER['PHP_SELF'];?>">
-    <input  type="text" name="managerId" value="<?php $datas[4] ?>">
-    <input type="submit">
-</form>
+    <form action="upload.php" method="get" enctype="multipart/form-data">
+       Still Ironing out this section. --
+        <br><br><br>
+        Select CSV file to parse( Format has to be - EmployeeId,	FirstName,	LastName,	Title,	ManagerId,)
+        :
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Csv" name="submit">
+    </form>
+    <br><br><br><br>
+    <br><br><br>
 </div>
 </div>
 </div>

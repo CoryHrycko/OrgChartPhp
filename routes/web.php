@@ -11,13 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Going to use this for the main upload page once completed.
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 Route::get('/index.php/org?managerId=1', function ($id) {
     return view('employee');
 });
-Route::get('/org', function () {
+Route::get('/', function () {
     return view('org');
 });
 Route::get('/emp', function () {
