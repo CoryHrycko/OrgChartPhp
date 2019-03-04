@@ -19,6 +19,6 @@
 </table>
 </div>
 <br>
-<a href="/org">Back</a>
+<a href="/">Back</a>
 </body>
 </html>

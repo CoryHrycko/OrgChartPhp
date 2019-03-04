@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a56125c-708e-403c-9d86-620a273ae2bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/inc/chart.inc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/inc/users.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/inc/users.inc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/org.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/org.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/employee.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employee.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -33,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/employee.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+            <state relative-caret-position="308">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -63,13 +57,13 @@
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/public/inc/csv.inc.php" />
         <option value="$PROJECT_DIR$/public/inc/csv2.inc.php" />
-        <option value="$PROJECT_DIR$/resources/views/employee.blade.php" />
         <option value="$PROJECT_DIR$/public/inc/users.inc.php" />
         <option value="$PROJECT_DIR$/public/inc/chart.inc.php" />
         <option value="$PROJECT_DIR$/resources/views/org.blade.php" />
         <option value="$PROJECT_DIR$/public/upload.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/resources/views/employee.blade.php" />
       </list>
     </option>
   </component>
@@ -173,6 +167,17 @@
             <path>
               <item name="orgchart3" type="b2602c69:ProjectViewProjectNode" />
               <item name="orgchart3" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="orgchart3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="orgchart3" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="orgchart3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="orgchart3" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -228,12 +233,12 @@
       <option name="presentableId" value="Default" />
       <updated>1551504391304</updated>
       <workItem from="1551504393013" duration="3470000" />
-      <workItem from="1551544012597" duration="51214000" />
+      <workItem from="1551544012597" duration="51463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54684000" />
+    <option name="totallyTimeSpent" value="54933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -381,13 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/employee.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -440,6 +438,13 @@
             <caret line="20" selection-start-line="20" selection-end-line="20" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/employee.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
         </state>
       </provider>
     </entry>
