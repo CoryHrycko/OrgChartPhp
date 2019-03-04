@@ -16,6 +16,8 @@ function read_csv($filename)
     };
     return $rows2;
 };
+
+$data = read_csv('CodeKataPhpOrgChart.csv');
 //writes given array to csv file
 function write_csv($filename, $rows2)
 {

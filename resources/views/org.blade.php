@@ -1,5 +1,3 @@
-<?php //$_SESSION[ 'display_employee.blade.php' ] = TRUE; ?>
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -15,10 +13,7 @@
  * Time: 11:30 AM
  */
 $mid = 0;
-
 include("init.inc.php");
-header('content-type: text/plain');
-$data = read_csv('CodeKataPhpOrgChart.csv');
 ?>
 <br><br><br><br>
 <div class="container">
@@ -31,16 +26,11 @@ $data = read_csv('CodeKataPhpOrgChart.csv');
     echo "<td>", $dat,  '</td>';
 }
         $datasLink = $datas[4];
-//        echo "<td> <a href= 'x' > Manger-tree </a></td> ";
 
          echo  "<td><form method='get' action= '/emp/'$_SERVER[PHP_SELF]>
                    <input hidden type='text' name='managerId' value='$datas[4]'>
                     <input type='submit' value='See org-chart'>
                 </form></td>";
-
-
-
-
 
       echo '</tr>';
         }?>
@@ -55,11 +45,6 @@ $data = read_csv('CodeKataPhpOrgChart.csv');
     <input  type="text" name="managerId" value="<?php $datas[4] ?>">
     <input type="submit">
 </form>
-    <br><br><br><br>
-    <form method="get" action="<?php echo $mid ?>">
-        <input  type="text" name="managerId" value="<?php $datas[4] ?>">
-        <input type="submit">
-    </form>
 </div>
 </div>
 </div>
