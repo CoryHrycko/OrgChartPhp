@@ -15,17 +15,20 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/index.php/org?managerId=1', function ($id) {
+Route::match(['get','post'],'/index.php/org?managerId=1', function ($id) {
     return view('employee');
 });
-Route::get('/', function () {
+Route::match(['get','post'],'/', function () {
     return view('org');
 });
-Route::get('/emp', function () {
+Route::match(['get','post'],'/emp', function () {
     return view('employee');
 });
-Route::get('/org?managerId=1', function () {
+Route::match(['get','post'],'/org?managerId=1', function () {
     return view('employee');
 });
+//Route::post('/', function () {
+//    return view('employee');
+//});
 
 

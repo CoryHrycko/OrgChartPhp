@@ -26,13 +26,26 @@ include("init.inc.php"); ?>
 <hr>
 
 <div class="row justify-content-center align-items-center">
-    <form action="upload.php" method="get" enctype="multipart/form-data">
-       Still Ironing out this section. --
-        <br><br><br>
-        Select CSV file to parse( Format has to be - EmployeeId,	FirstName,	LastName,	Title,	ManagerId,)
-        :
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Csv" name="submit">
+<?php //include("upload.php");
+include("CsvFile.php");
+$csvFile = new CsvFile();
+
+if(isset($_POST['sub'])){
+    $csvFile->import($_FILES['file']['tmp_name']);
+}
+?>
+    {{--<form action="upload.php" method="get" enctype="multipart/form-data">--}}
+       {{--Still Ironing out this section. ----}}
+        {{--<br><br><br>--}}
+        {{--Select CSV file to parse( Format has to be - EmployeeId,	FirstName,	LastName,	Title,	ManagerId,)--}}
+        {{--:--}}
+        {{--<input type="file" name='fileToUpload' id="fileToUpload">--}}
+        {{--<input type="submit" value="Upload Csv" name="submit">--}}
+    {{--</form>--}}
+    <form  method="post" enctype="multipart/form-data">
+        @csrf
+        <input type="file" name="file"><br><br>
+        <input type="submit" value="Import" name="sub">
     </form>
     <br><br><br><br>
     <br><br><br>
