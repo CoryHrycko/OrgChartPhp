@@ -6,12 +6,7 @@
 <body>
 <div class="flex-center position-ref full-height">
 <?php
-/**
- * Created by PhpStorm.
- * User: cory
- * Date: 3/1/2019
- * Time: 11:30 AM
- */
+
 include("init.inc.php"); ?>
 <br><br><br><br>
 <div class="container">
@@ -26,13 +21,37 @@ include("init.inc.php"); ?>
 <hr>
 
 <div class="row justify-content-center align-items-center">
+    <form method='POST' enctype='multipart/form-data'>
+        Upload CSV FILE: <input type='file' name='csv_info' /> <input type='submit' name='submit' value='Upload File' />
+    </form>
 <?php //include("upload.php");
 include("CsvFile.php");
 $csvFile = new CsvFile();
 
-if(isset($_POST['sub'])){
-    $csvFile->import($_FILES['file']['tmp_name']);
-}
+    include_once 'connection.php';
+    if(isset($_POST['submit'])){
+        if($_FILES['csv_data']['name']){
+
+            $arrFileName = explode('.',$_FILES['csv_data']['name']);
+            if($arrFileName[1] == 'csv'){
+                $handle = fopen($_FILES['csv_data']['tmp_name'], "r");
+                while (($dataC = fgetcsv($handle, 1000, ",")) !== FALSE) {
+
+                    $EmployeeId = mysqli_real_escape_string($conn,$dataC[0]);
+                    $FirstName = mysqli_real_escape_string($conn,$dataC[1]);
+                    $LastName = mysqli_real_escape_string($conn,$dataC[2]);
+                    $Title = mysqli_real_escape_string($conn,$dataC[3]);
+                    $ManagerId = mysqli_real_escape_string($conn,$dataC[4]);
+
+                    $import="INSERT into tbl_csv (EmployeeId,FirstName,LastName,Title,ManagerId) values('$EmployeeId','$FirstName','$LastName','$Title','$ManagerId')";
+                    mysqli_query($conn,$import);
+                }
+                fclose($handle);
+                print "Import done";
+            }
+        }
+    }
+
 ?>
     {{--<form action="upload.php" method="get" enctype="multipart/form-data">--}}
        {{--Still Ironing out this section. ----}}
@@ -42,11 +61,7 @@ if(isset($_POST['sub'])){
         {{--<input type="file" name='fileToUpload' id="fileToUpload">--}}
         {{--<input type="submit" value="Upload Csv" name="submit">--}}
     {{--</form>--}}
-    <form  method="post" enctype="multipart/form-data">
-        @csrf
-        <input type="file" name="file"><br><br>
-        <input type="submit" value="Import" name="sub">
-    </form>
+
     <br><br><br><br>
     <br><br><br>
 </div>

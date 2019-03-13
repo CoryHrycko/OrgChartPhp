@@ -5,7 +5,6 @@
  * Date: 3/4/2019
  * Time: 1:01 AM
  */
-<?php
 if(isset($_POST['submit'])){
 
     //collect form data

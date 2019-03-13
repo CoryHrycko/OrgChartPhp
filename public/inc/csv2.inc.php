@@ -10,9 +10,9 @@ function read_csv2($filename)
 };
 
 $datas[] = 0;
-$data = read_csv2('codekataphporgchart.csv');
+$data2 = read_csv2('codekataphporgchart.csv');
 echo "<tr>";
-foreach($data[$_GET['managerId']] as $dat) {
+foreach($data2[$_GET['managerId']] as $dat) {
 //
     echo "<td>", $dat, "</td>";
     array_push($datas,$dat );
